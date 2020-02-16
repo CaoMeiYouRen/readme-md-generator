@@ -51,7 +51,7 @@
 <% } -%>
 <% if (projectPrerequisites && projectPrerequisites.length) { -%>
 
-## 环境要求
+## 依赖要求
 
 <% projectPrerequisites.map(({ name, value }) => { -%>
 - <%= name %> <%= value %>
@@ -105,7 +105,7 @@
 
 ## 🤝贡献
 
-欢迎Contributions, issues and feature!<br />请查看 [issues page](<%= issuesUrl %>). <%= contributingUrl ? `您还可以查看[contributing guide](${contributingUrl}).` : '' %>
+欢迎Contributions, issues and feature!<br />如有问题请查看 [issues page](<%= issuesUrl %>). <%= contributingUrl ? `您还可以查看[contributing guide](${contributingUrl}).` : '' %>
 <% } -%>
 
 ## 支持
