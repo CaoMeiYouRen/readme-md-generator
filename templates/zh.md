@@ -89,7 +89,7 @@
 👤 **<%= authorName %>**
 <% } %>
 <% if (authorWebsite) { -%>
-* Website: <%= authorWebsite %>
+* Website: [<%= authorWebsite %>](<%= authorWebsite %>)
 <% } -%>
 <% if (authorTwitterUsername) { -%>
 * Twitter: [@<%= authorTwitterUsername %>](https://twitter.com/<%= authorTwitterUsername %>)
