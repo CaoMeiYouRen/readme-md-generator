@@ -1,4 +1,4 @@
-<h1 align="center"><%= projectName %> </h1>
+<h1 align="center">Welcome to <%= projectName %> 👋</h1>
 <p>
 <% if (isProjectOnNpm) { -%>
   <a href="https://www.npmjs.com/package/<%= projectName %>" target="_blank">
@@ -34,24 +34,21 @@
   </a>
 <% } -%>
 </p>
-
 <% if (projectDescription) { -%>
 
 > <%= projectDescription %>
 <% } -%>
 <% if (projectHomepage) { -%>
 
-### 🏠 [主页](<%= projectHomepage %>)
-
+### 🏠 [Homepage](<%= projectHomepage %>)
 <% } -%>
 <% if (projectDemoUrl) { -%>
 
 ### ✨ [Demo](<%= projectDemoUrl %>)
-
 <% } -%>
 <% if (projectPrerequisites && projectPrerequisites.length) { -%>
 
-## 依赖要求
+## Prerequisites
 
 <% projectPrerequisites.map(({ name, value }) => { -%>
 - <%= name %> <%= value %>
@@ -59,7 +56,7 @@
 <% } -%>
 <% if (installCommand) { -%>
 
-## 安装
+## Install
 
 ```sh
 <%= installCommand %>
@@ -67,7 +64,7 @@
 <% } -%>
 <% if (usage) { -%>
 
-## 使用
+## Usage
 
 ```sh
 <%= usage %>
@@ -75,7 +72,7 @@
 <% } -%>
 <% if (testCommand) { -%>
 
-## 测试
+## Run tests
 
 ```sh
 <%= testCommand %>
@@ -83,13 +80,12 @@
 <% } -%>
 <% if (authorName || authorTwitterUsername || authorGithubUsername) { -%>
 
-## 作者
-
+## Author
 <% if (authorName) { %>
 👤 **<%= authorName %>**
 <% } %>
 <% if (authorWebsite) { -%>
-* Website: [<%= authorWebsite %>](<%= authorWebsite %>)
+* Website: <%= authorWebsite %>
 <% } -%>
 <% if (authorTwitterUsername) { -%>
 * Twitter: [@<%= authorTwitterUsername %>](https://twitter.com/<%= authorTwitterUsername %>)
@@ -103,14 +99,14 @@
 <% } -%>
 <% if (issuesUrl) { -%>
 
-## 🤝贡献
+## 🤝 Contributing
 
-欢迎Contributions, issues and feature!<br />如有问题请查看 [issues page](<%= issuesUrl %>). <%= contributingUrl ? `您还可以查看[contributing guide](${contributingUrl}).` : '' %>
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](<%= issuesUrl %>). <%= contributingUrl ? `You can also take a look at the [contributing guide](${contributingUrl}).` : '' %>
 <% } -%>
 
-## 支持
+## Show your support
 
-如果觉得这个项目有用的话请给一颗⭐️，非常感谢
+Give a ⭐️ if this project helped you!
 <% if (authorPatreonUsername) { -%>
 
 <a href="https://www.patreon.com/<%= authorPatreonUsername %>">
@@ -128,4 +124,4 @@ This project is [<%= licenseName %>](<%= licenseUrl %>) licensed.
 <% } -%>
 
 ***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+<%- include('footer.md'); -%>
